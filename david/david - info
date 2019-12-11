@@ -1,0 +1,15 @@
+
+dws1985@hotmail.com, 68-Kappa, prof
+eguiraose@hotmail.com, 68-kappa, prof
+rai@gmail.com, 68-kappa, alum
+
+
+TO DO:
+
+* Hacer la portada con capturas y algo de texto
+
+
+DEPLOYMENT:
+
+* Check that folder public/images exists and that image 'imagen_perfil_generica.png' is there.
+* Populate the 'days' table with 2019 and 2020.

@@ -1,0 +1,582 @@
+/*==============================================
+ESTILOS PARA BODY Y HEADERS ETC
+==============================================*/
+
+body {
+	margin: 0;
+	font-family: 'Karla', sans-serif;
+}
+
+.header {
+	background-color: rgb(61, 49, 31);
+	height: 33px;
+	padding: 20px;
+	font-size: 25px;
+	color: rgb(240, 216, 180);
+}
+
+.header-contenido {
+	width: 50%;
+	float: left;
+}
+
+#titulo-link {
+	color: rgb(240, 216, 180);
+	text-decoration: none;
+}
+
+#header-autenticacion {
+	text-align: right;
+}
+
+.subheader {
+	background-color: rgb(99, 82, 56);
+	height: 33px;
+	color: white;
+	padding: 18px 20px;
+}
+
+.header-text {
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	color: white;
+	margin: 0 20px 0 0;
+	display: inline-block;
+}
+
+.header-button {
+ 	background-color: rgb(99, 82, 56);
+ 	display: inline-block;
+	border: none;
+	border-radius: 5px;
+	margin: 0 20px 0 0;
+	color: white;
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	transition-duration: 0.4s;
+}
+
+.header-button:hover {
+	background-color: rgb(130, 109, 77);
+	text-decoration: none;
+	color: white;
+}
+
+.content {
+	width: 1100px;
+	margin: 0 auto;
+	padding: 40px 30px;
+}
+
+/*==============================================
+ESTILOS PARA EL CALENDARIO
+==============================================*/
+
+.calendar {
+	display: grid;
+	grid-template-columns: 50px 150px 150px 150px 150px 150px 150px 150px;
+	grid-template-rows: 50px 50px 5px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+	grid-template-areas: 
+		". calHead calHead calHead calHead calHead calHead calHead"
+		". day1 day2 day3 day4 day5 day6 day7"
+		"esp-horiz esp-horiz esp-horiz esp-horiz esp-horiz esp-horiz esp-horiz esp-horiz"
+		"hora1 main main main main main main main"
+		"hora2 main main main main main main main"
+		"hora3 main main main main main main main"
+		"hora4 main main main main main main main"
+		"hora5 main main main main main main main"
+		"hora6 main main main main main main main"
+		"hora7 main main main main main main main"
+		"hora8 main main main main main main main"
+		"hora9 main main main main main main main";
+}
+
+.cal-head {
+	grid-area: calHead;
+	background-color: rgb(128, 128, 128);
+	border-radius: 5px 5px 0 0;
+	padding: 5px 20px;
+}
+.cal-head-contenido {
+	width:50%;
+	float: left;
+}
+#cal-mes {
+	font-size: 25px;
+}
+.day1, .day2, .day3, .day4, .day5, .day6, .day7 { 
+	background-color: rgb(100, 100, 100);
+	color: rgb(240, 216, 180);
+	padding: 5px; text-align: center;
+}
+.day1 { grid-area: day1; }
+.day2 { grid-area: day2; }
+.day3 {	grid-area: day3; }
+.day4 {	grid-area: day4; }
+.day5 {	grid-area: day5; }
+.day6 {	grid-area: day6; }
+.day7 {	grid-area: day7; }
+.esp-horiz {
+	grid-area: esp-horiz;
+}
+.hora1, .hora2, .hora3, .hora4, .hora5, .hora6, .hora7, .hora8, .hora9 {
+	border-top: 1px solid red;
+}
+.hora1 { grid-area: hora1; }
+.hora2 { grid-area: hora2; }
+.hora3 { grid-area: hora3; }
+.hora4 { grid-area: hora4; }
+.hora5 { grid-area: hora5; }
+.hora6 { grid-area: hora6; }
+.hora7 { grid-area: hora7; }
+.hora8 { grid-area: hora8; }
+.hora9 { grid-area: hora9; }
+.main {
+	grid-area: main;
+	background-color: rgb(210, 210, 210);
+	position:relative;
+}
+.main {
+	/*border: 1px solid red;*/
+}
+
+.cal-button {
+ 	background-color: rgb(128, 128, 128);
+ 	display: inline-block;
+	border: none;
+	/*width: 30px;
+	height: 30px;*/
+	border-radius: 50%;
+	margin: 6px 5px;
+	padding: 3px 10px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	font-family: 'Karla', sans-serif;
+	font-size: 18px;
+	transition-duration: 0.4s;
+}
+
+.cal-button:hover {
+	background-color: rgb(130, 109, 77);
+}
+
+.cal-slot {
+	position:absolute;
+	background-color: rgb(155, 154, 166);
+	width: 140px;
+	border-radius: 4px 4px 15px 4px;
+	margin: 0 3px;
+	padding: 2px 3px;
+	font-size: 11px;
+}
+
+.cal-leccion {
+	position:absolute;
+	background-color: green;
+	width: 98px;
+	border-radius: 4px 4px 15px 4px;
+	margin: 0 0 0 40px;
+	padding: 2px 3px;
+	font-size: 11px;
+	color: white;
+	word-wrap: break-word;
+}
+/*
+.nuevo-slot-lesson {
+	margin: 25px 0 0 0;
+	background-color: white;
+	width: 550px;
+	height: 75px;
+	border-radius: 4px;
+	padding: 5px;
+}
+*/
+
+.modificar-calendario {
+	margin: 0 0 20px 50px;
+	/*background-color: rgb(210, 210, 210);*/
+	width: 1008px;
+	border-radius: 4px;
+	padding: 20px;
+	border: 1px solid rgb(210, 210, 210);
+}
+
+.calendario-form {
+	display: inline;
+}
+
+.calendario-selector-diayhora {
+ 	display: inline-block;
+	border: 1px solid rgb(210, 210, 210);
+	background-color: white;
+	border-radius: 5px;
+	margin: 0 20px 25px 5px;
+	color: rgb(100, 100, 100);
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	transition-duration: 0.4s;
+}
+
+#calendario-info {
+	text-align: center;
+}
+
+
+
+/*==============================================
+ESTILOS PARA EL CORREO
+==============================================*/
+
+.textarea-mensaje {
+	resize: none;
+	border: 0;
+	border-radius: 10px;
+	background-color: rgb(217, 217, 217);
+	margin: 0 0 20px 0;
+	padding: 20px;
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+}
+
+#contenedor-mensajes {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.mensaje {
+	padding: 20px;
+	width: 600px;
+	position: relative;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#mensajes-espaciador {
+	width: 860px;
+	margin: 20px 0 30px 0;
+	border-bottom: rgb(220, 220, 220) solid 3px;
+}
+
+.mensaje-primero {
+	background-color: rgb(156,36,36);
+	border-radius: 0 10px 10px 10px;
+	margin: 0 0 20px 0;
+}
+
+.mensaje-segundo {
+	background-color: rgb(219,99,90);
+	border-radius: 10px 10px 0 10px;
+	margin: 0 0 20px 15px;
+}
+
+.mensaje-primero-encabezado {
+	color: white;
+	font-style: italic;
+	font-size: 15px;
+	margin: 0 0 10px 0;
+}
+
+.mensaje-primero-cuerpo {
+	color: rgb(191,191,191);
+}
+
+.mensaje-segundo-encabezado {
+	color: black;
+	font-style: italic;
+	font-size: 15px;
+	margin: 0 0 10px 0;
+}
+
+.mensaje-segundo-cuerpo {
+	color: rgb(38,38,38);
+}
+
+.mensaje-primero:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid rgb(156,36,36);
+  border-top: 10px solid rgb(156,36,36);
+  border-bottom: 10px solid transparent;
+  left: -18px;
+  top: 6px;
+}
+
+.mensaje-segundo:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid rgb(219,99,90);
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid rgb(219,99,90);
+  right: -18px;
+  bottom: 6px;
+}
+
+.link-eliminar-mensaje {
+	color: rgb(191,191,191);
+	text-decoration: none;
+	font-style: normal;
+}
+
+.link-eliminar-mensaje:hover {
+	color: yellow;
+}
+
+
+/*==============================================
+AREA PERSONAL
+==============================================*/
+
+.info-personal {
+	display: grid;
+	grid-template-columns: 250px 250px 600px;
+	grid-template-rows: 190px 300px;
+	grid-template-areas: 
+		"avatar datos presentacion"
+		"estadisticas estadisticas presentacion";
+}
+
+.avatar {
+	grid-area: avatar;
+	/*background-color: pink;*/
+}
+
+#avatar-img {
+	margin: 0 75px 0 30px;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.nombre  {
+	font-size: 30px;
+	margin: 0 0 14px 0;
+}
+
+.datos {
+	grid-area: datos;
+	/*background-color: yellow;*/
+}
+
+.estadisticas {
+	grid-area: estadisticas;
+	/*background-color: magenta;*/
+	border-top: rgb(220, 220, 220) solid 3px;
+	padding: 10px 0 0 30px;
+}
+
+.presentacion {
+	grid-area: presentacion;
+	margin: 0 0 0 55px;
+	border-top: 4px solid rgb(78, 79, 156);
+	background-color: rgb(220, 220, 220);
+	padding: 10px 0 0 30px;
+	box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.5);
+}
+
+.presentacion-textarea {
+	resize: none;
+	border: 0;
+	background-color: rgb(220, 220, 220);
+	margin: 0;
+	padding: 0;
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+}
+
+.presentacion-textarea:focus {
+	background-color: rgb(235, 235, 235);
+}
+
+.presentacion-button {
+ 	background-color: rgb(99, 82, 56);
+	border: none;
+	margin: 0 20px 0 0;
+	color: white;
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	transition-duration: 0.4s;
+}
+
+.presentacion-button:hover {
+	background-color: rgb(130, 109, 77);
+}
+
+.input-file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.input-file + label {
+    margin: 0 0 0 75px;
+    cursor: pointer;
+    color: blue;
+}
+
+.input-file + label:hover {
+	color: green;
+}
+
+
+/*==============================================
+VER USUARIOS
+==============================================*/
+
+.usuario-tarjeta {
+	width: 850px;
+	margin: 18px auto;
+	padding: 10px 30px;
+	background-color: rgb(220, 220, 220);
+	border-top: 4px solid rgb(78, 79, 156);
+	box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.5);
+}
+
+.usuario-tarjeta div {
+	vertical-align: top;
+}
+
+#imagen {
+	display: inline-block;
+	width: 16%;
+	padding: 10px 0 0 0;
+}
+
+#info-personal {
+	display: inline-block;
+	width: 25%;
+	padding: 0;
+	border-right: 3px dashed gray;
+}
+
+#texto-presentación {
+	display: inline-block;
+	width: 54%;
+	padding: 14px 0 0 15px;
+}
+
+#usuario-avatar-img {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/*==============================================
+BIENVENIDA
+==============================================*/
+
+#panel-superior-texto {
+	background-color: rgb(237, 196, 142);
+	font-size: 25px;
+	color: white;
+	padding: 40px 20%;
+}
+
+#paneles {
+	display: grid;
+	grid-template-columns: 600px 600px;
+	grid-template-rows: 480px 480px;
+	grid-template-areas: 
+		"ariz arde"
+		"abiz abde";
+}
+
+#arriba-izquierda {
+	grid-area: ariz;
+	/*border: 1px solid gray;*/
+}
+
+#arriba-derecha {
+	grid-area: arde;
+	/*border: 1px solid gray;*/
+}
+
+#abajo-izquierda {
+	grid-area: abiz;
+	/*border: 1px solid gray;*/
+}
+
+#abajo-derecha {
+	grid-area: abde;
+	/*border: 1px solid gray;*/
+}
+
+.titulo-bienvenida-paneles {
+	font-family: 'Karla', sans-serif;
+	font-size: 30px;
+	color: rgb(51, 153, 255);
+	margin: 0 0 25px 0;
+}
+
+.img-bienvenida-paneles {
+	box-shadow: 0px 0px 12px rgb(200, 200, 200);
+	margin: 0 0 25px 0;
+}
+
+.texto-bienvenida-paneles {
+	margin: 0;
+	width: 447px;
+	text-align: justify;
+  	text-justify: inter-word;
+  	color: rgb(80, 80, 80);
+  	line-height: 22px;
+}
+
+
+
+/*==============================================
+OTROS ESTILOS
+==============================================*/
+
+.select-user {
+ 	background-color: rgb(99, 82, 56);
+ 	display: inline-block;
+	border: none;
+	border-radius: 5px;
+	margin: 0 20px 25px 5px;
+	color: white;
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	transition-duration: 0.4s;
+}
+
+.select-user:hover {
+	background-color: rgb(130, 109, 77);
+}
+
+#mensaje-grande {
+	width: 500px;
+	height: 300px;
+	margin: 50px auto 0 auto;
+	padding: 50px;
+	color: rgb(80,80,80);
+	background-color: rgb(210, 210, 210);
+	box-shadow: 2px 2px 3px rgb(170, 170, 170);
+	border-radius: 10px;
+	font-size: 30px;
+}
